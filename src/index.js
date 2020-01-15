@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const routes = require('./routes');
 
 const app = express();
 
@@ -9,6 +10,8 @@ mongoose.connect('mongodb+srv://omnistack:omnistack@cluster0-p1bcw.mongodb.net/w
 });
 app.use(express.json());
 
+app.use(routes);
+
 //Métodos HTTP: GET,POST,PUT,DELETE
 
 //Tipos de parâmetros:
@@ -17,9 +20,6 @@ app.use(express.json());
 // Body: request.body (dados para criação )
 //MongoDB (Não-relacional)
 
-app.post('/users', (request, response) => {
-  console.log(request.body);
-  return response.json({message: 'Hello OmniStack'});
-});
+
 
 app.listen(3333);
