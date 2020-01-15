@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+
 const PointSchema = new mongoose.Schema({
   type: {
     type: String,
@@ -7,6 +8,9 @@ const PointSchema = new mongoose.Schema({
     required:true,
   },
   coordinates: {
-    type: [Number]
-  }
-})
+    type: [Number],
+    required:true,
+  },
+});
+
+module.exports = PointSchema;
