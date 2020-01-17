@@ -1,9 +1,23 @@
 import React from 'react';
+import './global.css';
+import './App.css';
 
-import Header from './Header'
+
 function App() {
  return (
-   <Header title="Dashboard"/>
+   <div id="app">
+     <aside>
+      <strong>Cadastrar</strong>
+      <form>
+        <label htmlFor="">Usuario do Github</label>
+        <input name="github_username" id="username_github"/>
+      </form>
+     </aside>
+     <main>
+
+     </main>
+
+   </div>
  )
 }
 
