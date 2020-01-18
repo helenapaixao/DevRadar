@@ -2,6 +2,7 @@ import React from "react";
 import "./global.css";
 import "./App.css";
 import './Sidebar.css';
+import './Main.css';
 
 function App() {
   return (
@@ -37,8 +38,62 @@ function App() {
         <ul>
           <li className="dev-item">
             <header>
-              <img src="" alt=""/>
+              <img src="https://avatars1.githubusercontent.com/u/11083288?s=460&v=4" alt="Helena Paixão"/>
+              <div className="user-info">
+                  <strong>Helena Paixão</strong>
+                  <span>ReactJS, React Native, Node.js</span>
+              </div>
             </header>
+            <p>Engenharia de Software - UFMS</p>
+            <a href="https://github.com/helenapaixao"> Acessar perfil no github</a>
+          </li>
+
+          <li className="dev-item">
+            <header>
+              <img src="https://avatars1.githubusercontent.com/u/11083288?s=460&v=4" alt="Helena Paixão"/>
+              <div className="user-info">
+                  <strong>Helena Paixão</strong>
+                  <span>ReactJS, React Native, Node.js</span>
+              </div>
+            </header>
+            <p>Engenharia de Software - UFMS</p>
+            <a href="https://github.com/helenapaixao"> Acessar perfil no github</a>
+          </li>
+
+          <li className="dev-item">
+            <header>
+              <img src="https://avatars1.githubusercontent.com/u/11083288?s=460&v=4" alt="Helena Paixão"/>
+              <div className="user-info">
+                  <strong>Helena Paixão</strong>
+                  <span>ReactJS, React Native, Node.js</span>
+              </div>
+            </header>
+            <p>Engenharia de Software - UFMS</p>
+            <a href="https://github.com/helenapaixao"> Acessar perfil no github</a>
+          </li>
+
+          <li className="dev-item">
+            <header>
+              <img src="https://avatars1.githubusercontent.com/u/11083288?s=460&v=4" alt="Helena Paixão"/>
+              <div className="user-info">
+                  <strong>Helena Paixão</strong>
+                  <span>ReactJS, React Native, Node.js</span>
+              </div>
+            </header>
+            <p>Engenharia de Software - UFMS</p>
+            <a href="https://github.com/helenapaixao"> Acessar perfil no github</a>
+          </li>
+
+          <li className="dev-item">
+            <header>
+              <img src="https://avatars1.githubusercontent.com/u/11083288?s=460&v=4" alt="Helena Paixão"/>
+              <div className="user-info">
+                  <strong>Helena Paixão</strong>
+                  <span>ReactJS, React Native, Node.js</span>
+              </div>
+            </header>
+            <p>Engenharia de Software - UFMS</p>
+            <a href="https://github.com/helenapaixao"> Acessar perfil no github</a>
           </li>
         </ul>
       </main>
