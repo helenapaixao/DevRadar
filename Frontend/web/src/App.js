@@ -34,7 +34,6 @@ function App() {
         </form>
       </aside>
       <main>
-
         <ul>
           <li className="dev-item">
             <header>
