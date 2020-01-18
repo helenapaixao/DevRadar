@@ -27,12 +27,17 @@ function App() {
         timeout: 300,
       }
     );
-  }, [])
+  }, []);
+
+  async function handleAddDev(e) {
+     e.preventDefault(); 
+     
+  }
   return (
     <div id="app">
       <aside>
         <strong>Cadastrar</strong>
-        <form>
+        <form onSubmit={handleAddDev}>
           <div className="input-block">
             <label htmlFor="github_username">Usuario do Github</label>
             <input 
@@ -54,10 +59,12 @@ function App() {
             onChange={e => setTechs(e.target.value)}
             />
           </div>
+
           <div className="input-group">
             <div className="input-block">
               <label htmlFor="latitude">Latitude</label>
-              <input type="number"
+              <input 
+              type="number"
                name="latitude" 
                id="latitude" 
                required value={latitude}
