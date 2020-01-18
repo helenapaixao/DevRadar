@@ -32,7 +32,16 @@ function App() {
           <button type="submit">Salvar</button>
         </form>
       </aside>
-      <main />
+      <main>
+
+        <ul>
+          <li className="dev-item">
+            <header>
+              <img src="" alt=""/>
+            </header>
+          </li>
+        </ul>
+      </main>
     </div>
   );
 }
