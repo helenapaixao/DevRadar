@@ -1,11 +1,10 @@
 import React, {useEffect, useState} from 'react';
-import {StyleSheet} from 'react-native'
-import MapView from 'react-native-maps';
+import {StyleSheet,Image} from 'react-native'
+import MapView, {Marker} from 'react-native-maps';
 import { requestPermissionsAsync, getCurrentPositionAsync} from 'expo-location'
 
 
 function Main() {
-
   const [currentRegion,setCurrentRegion] = useState(null);
   useEffect(() => {
     async function loadInitialPosition() {
@@ -29,7 +28,13 @@ function Main() {
   if(!currentRegion) {
     return null;
   }
-  return <MapView initRegion={currentRegion} style={sytles.map}/>
+  return (
+  <MapView initialRegion={currentRegion} style={sytles.map}>
+    <Marker coordinate={{latitude: -20.4868923, longitude: -54.5960898 }}>
+     <Image style={style.avatar} source={{uri: 'https://avatars1.githubusercontent.com/u/11083288?s=460&v=4'}}/>
+      </Marker>
+    </MapView>
+  );
 }
 
 const sytles = StyleSheet.create({
