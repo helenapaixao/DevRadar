@@ -6,7 +6,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 
 
 function Main({navigation}) {
-
+  const [devs,setDevs] = useState([]);
   const [currentRegion,setCurrentRegion] = useState(null);
 
   useEffect(() => {
@@ -29,12 +29,30 @@ function Main({navigation}) {
     loadInitialPosition();
   },[]);
 
+  async function loadDevs() {
+  const {latitude, longitude} = currentRegion;
+
+  const response = await api.get('/search', {
+    params: {
+      latitude,
+      longitude,
+      techs:'ReactJs'
+    }
+  });
+  
+  setDevs(response.data);
+  }
+  function handleRegionChange(region) {
+    console.log(region)
+    setCurrentRegion(region);
+
+  }
   if(!currentRegion) {
     return null;
   }
   return (
     <>
-  <MapView initialRegion={currentRegion} style={styles.map}>
+  <MapView onRegionChangeComplete={handleRegionChange} initialRegion={currentRegion} style={styles.map}>
     <Marker coordinate={{latitude: -20.4868923, longitude: -54.5960898 }}>
      <Image style={styles.avatar} source={{uri: 'https://avatars1.githubusercontent.com/u/11083288?s=460&v=4'}}/>
      <Callout onPress={() => {
@@ -57,7 +75,7 @@ function Main({navigation}) {
      autoCapitalize="words"
      autoCorrect={false}
      />
-     <TouchableOpacity onPress={() => {}} style={styles.loadButton}>
+     <TouchableOpacity onPress={loadDevs} style={styles.loadButton}>
        <MaterialIcons name="my-location" size={20} color="#FFF"/>
        </TouchableOpacity>
     </View>
