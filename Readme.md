@@ -28,7 +28,7 @@ This app features all the latest tools and practices in mobile development!
 
 ## Getting started
 
-1. Clone this repo using `git clone git@github.com:CarlosLevir/DevRadar.git devradar`
+1. Clone this repo using `git clone git@github.com:helenapaixao/DevRadar.git devradar`
 2. Move yourself to the appropriate directory: `cd devradar`<br />
 3. Run `yarn` to install dependencies<br />
 4. Run `lerna bootstrap` to install the packages dependecies
